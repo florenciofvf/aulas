@@ -1,6 +1,6 @@
 class Lâmpada 
   {
-      short voltagem;
+      short voltagem = 0;
       
       void acender()
         {
