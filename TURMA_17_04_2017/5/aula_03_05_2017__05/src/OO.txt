@@ -1,0 +1,158 @@
+AOO - Análise Orientada a Objetos - UML
+POO - Programação Orientada a Objetos
+ OO - Orientação a Objetos
+-------------------------------------
+Classes: São estrturas fornecidas pelas linguagens ditas 
+orientadas para a implementação de nossas abstrações.
+(Especificação, Molde, Modelo, Planta)
+
+Objeto ou Instância: É a materialização da nossa classe (abstração). Este pode 
+ser usado para armazenar dados e executar operações.
+
+Referência: Através das referências manipulamos os objetos e invocamos suas operações.
+(variável)
+
+Atributos do Objeto: As características do objeto. Os atributos armazenam o estado do 
+objeto.
+
+Métodos do Objeto: O que um objeto pode fazer. Os métodos é que tornam os objetos
+dinâmicos.
+
++-------------------+
+|   Geladeira       |
++-------------------+
+|   qtdPortas       |
+|   qtdPratileiras  |
++-------------------+
+|   gelar           |
+|   abrirPorta      |
++-------------------+
+
++--------------------+
+|   Geladeira        |
++--------------------+
+|   qtdPortas:2      |
+|   qtdPratileiras:4 |
++--------------------+
+
++--------------------+
+|   Geladeira        |
++--------------------+
+|   qtdPortas:1      |
+|   qtdPratileiras:3 |
++--------------------+
+
+
++-------------------+
+|   Bolo            |
++-------------------+
+|   sabor           |
+|   ingredientes    |
+|   formato         |
++-------------------+
+|   assar           |
+|   azedar          |
++-------------------+
+
++-------------------+
+|   Bolo            |
++-------------------+
+|   sabor: laranja  |
+|   ingredientes:   |
+|   farinha de      |
+|   trigo, ovos, etc|
+|   formato: oval   |
++-------------------+
+
+
+
+
++-------------------+
+|   Carro           |
++-------------------+
+|   preço           |
+|   cor             |
++-------------------+
+|   acelerar        |
+|   frear           |
++-------------------+
+
++-------------------+
+|   Carro           |
++-------------------+
+|   preço:5000      |
+|   cor:azul        |
++-------------------+
+
+
+
+
+
+
+
++-------------------+
+|   Conta           |
++-------------------+
+|   saldo           |
++-------------------+
+|   zerar           |
++-------------------+
+
+modelo Conta 
+  início-do-modelo
+    atributo saldo <= 1000
+  
+    comportamento zerar
+      início
+          saldo <= 0
+      fim     
+  
+    comportamento mostrarSaldo
+      início
+         imprimir saldo
+      fim
+  
+  fim-do-modelo
+
+modelo Carro 
+  início-do-modelo
+     atributo cor
+     
+     comportamento mudarCor(novaCor) 
+        início
+           cor <= novaCor
+        fim
+        
+  fim-do-modelo
+
+
+modelo Lâmpada 
+  início-do-modelo
+      atributo voltagem
+      
+      comportamento acender
+        início
+           voltagem <= 220
+        fim
+        
+      comportamento apagar
+        início 
+           voltagem <= 0
+        fim  
+        
+      comportamento mostrarEstado
+        início
+           se voltagem = 220
+              imprimir "ACESA"
+           senão
+              imprimir "APAGADA"   
+        fim  
+  fim-do-modelo
+
+
+
+
+
+
+
+
