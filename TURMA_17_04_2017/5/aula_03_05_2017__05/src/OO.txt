@@ -154,5 +154,17 @@ modelo Lâmpada
 
 
 
++---------------------------+
+|   ContaSimples            |
++---------------------------+
+|   -saldo                   |
++---------------------------+
+|   +depositar(valor)        |
+|   +sacar(valor): valor     |
+|   +mostrarDadosDaConta     |
++---------------------------+
+
+
+
 
 
