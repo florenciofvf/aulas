@@ -157,14 +157,23 @@ modelo Lâmpada
 +---------------------------+
 |   ContaSimples            |
 +---------------------------+
-|   -saldo                   |
+|   -saldo                  |
 +---------------------------+
-|   +depositar(valor)        |
-|   +sacar(valor): valor     |
-|   +mostrarDadosDaConta     |
+|   +depositar(valor)       |
+|   +sacar(valor): valor    |
+|   +mostrarDadosDaConta    |
 +---------------------------+
 
 
+Exercício
++---------------------------+
+|   Televisao               |
++---------------------------+
+|   -canal                  |
++---------------------------+
+|   +mudarCanal(numero)     |
+|   +mostrarInfoCanal       |
++---------------------------+
 
 
 
