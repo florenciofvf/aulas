@@ -1,4 +1,4 @@
-class Lâmpada 
+class Lampada 
   {
       short voltagem = 0;
       

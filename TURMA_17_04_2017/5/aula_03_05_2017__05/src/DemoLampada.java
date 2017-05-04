@@ -2,9 +2,9 @@
 public class DemoLampada {
 
 	public static void main(String[] args) {
-		Lâmpada x; //Declaranco uma variável para manipular o objeto "Referência"
+		Lampada x; //Declaranco uma variável para manipular o objeto "Referência"
 		
-		x = new Lâmpada(); //Recendo a referência ao objeto
+		x = new Lampada(); //Recendo a referência ao objeto
 		
 		x.mostrarEstado(); //Invocando o comportamento mostrarEstado. Resposta: APAGADA
 		
@@ -12,7 +12,7 @@ public class DemoLampada {
 		
 		x.mostrarEstado(); //Resposta: ACESA
 		
-		Lâmpada y = x; //Outra declaração de variável
+		Lampada y = x; //Outra declaração de variável
 		
 		y.mostrarEstado(); //Resposta: ACESA
 		
@@ -20,7 +20,7 @@ public class DemoLampada {
 		
 		x.mostrarEstado(); //Resposta: APAGADA
 		
-		x = new Lâmpada();
+		x = new Lampada();
 		x.acender();
 		y.mostrarEstado(); //Resposta: APAGADA
 	}

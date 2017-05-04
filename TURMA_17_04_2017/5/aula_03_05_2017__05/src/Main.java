@@ -6,13 +6,13 @@ public class Main {
 		new Main();
 		new String();
 		new Integer(90);
-		new Lâmpada();
+		new Lampada();
 		
-		System.out.println(  new Lâmpada()  );
-		System.out.println(  new Lâmpada()  );
-		System.out.println(  new Lâmpada()  );
-		System.out.println(  new Lâmpada()  );
-		System.out.println(  new Lâmpada()  );
+		System.out.println(  new Lampada()  );
+		System.out.println(  new Lampada()  );
+		System.out.println(  new Lampada()  );
+		System.out.println(  new Lampada()  );
+		System.out.println(  new Lampada()  );
 		
 		System.out.println("fim");
 	}
