@@ -7,19 +7,29 @@ public class DemoTelevisao {
 		Scanner s = new Scanner(System.in);
 
 		Televisao tv = new Televisao();
+		ControleRemoto x = new ControleRemoto();
+		
+		x.reconhecerTV(tv);
+		
 		mostrarOpcoes();
 
 		int opcao = s.nextInt();
 
-		while (opcao != 3) {
+		while (opcao != 5) {
 			switch (opcao) {
 			case 1:
 				System.out.println("Digite o número do canal");
 				int numero = s.nextInt();
-				tv.mudarCanal(numero);
+				x.mudarCanal(numero);
 				break;
 			case 2:
-				tv.descreverCanal();
+				x.descreverCanal();
+				break;
+			case 3:
+				x.ligar();
+				break;
+			case 4:
+				x.desligar();
 				break;
 			default:
 				System.out.println("OPÇÃO INVÁLIDA");
@@ -37,6 +47,8 @@ public class DemoTelevisao {
 		System.out.println("====(OPÇÕES)====");
 		System.out.println("1 - Mudar de canal");
 		System.out.println("2 - Descrever o canal");
-		System.out.println("3 - Sair");
+		System.out.println("3 - Ligar");
+		System.out.println("4 - Desligar");
+		System.out.println("5 - Sair");
 	}
 }
