@@ -1,0 +1,33 @@
+Construtores: São métodos especiais que são invocados todas as vezes que uma 
+nova instância é criada através da palavra reservada "new".
+ex. 
+    new Carro();  
+    new Pessoa(); 
+    new Relatorio();
+	new Conexao();
+
+Construtores são úteis para inicializar objetos.
+ex: new Relatorio("Cliente");
+    new Cliente("Maria");
+    new Integer(30);
+
+
+Características dos contrutores: 
+   Tem sempre o mesmo nome da classe diferenciando inclusive letras maiúsculas de 
+de minúsculas
+   class Pessoa {
+       Pessoa() {
+       }
+   }
+   
+Observações sobre os construtores.
+ 1-Não possui nenhum tipo de retorno, nem mesmo void.
+ 2-Pode exigir parâmetros.
+ 3-Pode ser sobrecarregado.
+ 4-Pode ter diferentes níveis de visibilidade.
+ 5-Pode invocar métodos comuns.
+ 6-Métodos comuns não podem invocar construtores.
+ 7-Pode invocar outro construtor.
+ 8-Quando um construtor invoca outro, esta deverá ser a primeira linha de instrução.
+ 9-Um construtor invoca outro através da palavra reservada this.
+10-Não pode ser invocado recurssivamente.
