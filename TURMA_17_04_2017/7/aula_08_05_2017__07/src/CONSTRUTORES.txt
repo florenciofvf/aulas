@@ -15,10 +15,17 @@ ex: new Relatorio("Cliente");
 Características dos contrutores: 
    Tem sempre o mesmo nome da classe diferenciando inclusive letras maiúsculas de 
 de minúsculas
+
+Se não for definido nenhum construtor na classe o compilador declara automaticamente
+um construtor padrão.
+
    class Pessoa {
+   
        Pessoa() {
        }
+       
    }
+   
    
 Observações sobre os construtores.
  1-Não possui nenhum tipo de retorno, nem mesmo void.
