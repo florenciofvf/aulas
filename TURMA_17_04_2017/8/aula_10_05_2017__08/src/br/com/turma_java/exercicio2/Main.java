@@ -10,7 +10,7 @@ public class Main {
 		n.imprimirDobro(); // 200
 		n.imprimirTripo(); // 300
 		n.imprimirSeEhParOuImpar(); // Par
-		n.aumentar10CentoEImprimir(); // 110
+		n.aumentar10PorCentoEImprimir(); // 110
 		n.imprimirValor(); // 110
 	}
 

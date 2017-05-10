@@ -24,7 +24,7 @@ public class Numero {
 
 	}
 
-	public void aumentar10CentoEImprimir() {
+	public void aumentar10PorCentoEImprimir() {
 
 	}
 
