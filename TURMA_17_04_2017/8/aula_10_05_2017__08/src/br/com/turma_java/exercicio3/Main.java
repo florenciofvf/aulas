@@ -9,7 +9,7 @@ public class Main {
 		p.imprimirFaixaEtaria();
 		
 //		DESCOMENTE E FAÇA FUNCIONAR
-//		p = new Pessoa(21);
+		p = new Pessoa(21);
 		p.imprimirFaixaEtaria();
 	}
 

@@ -12,7 +12,7 @@ public class Main {
 		Retangulo r = new Retangulo();
 		r.setLargura(100);
 		r.setAltura(50);
-		// System.out.println("Área do retângulo: " + r.calcularArea());
+		System.out.println("Área do retângulo: " + r.calcularArea());
 	}
 
 }

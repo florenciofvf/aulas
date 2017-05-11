@@ -4,11 +4,15 @@ public class Carro {
 	private int velocidade;
 	
 	public void acelerar() {
-		velocidade += 20;
+		if(velocidade < 300) {
+			velocidade += 20;
+		}
 	}
 	
 	public void frear() {
-		velocidade -= 20;
+		if(velocidade > 0) {
+			velocidade -= 20;
+		}
 	}
 	
 	public void mostrarVelocidade() {

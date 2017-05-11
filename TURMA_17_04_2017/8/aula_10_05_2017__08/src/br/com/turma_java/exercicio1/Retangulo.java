@@ -19,4 +19,14 @@ public class Retangulo {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
+	
+	public double calcularArea() {
+		return largura * altura;
+	}
 }
+
+
+
+
+
+
