@@ -13,7 +13,7 @@ public class Main {
 		int total = lista.calcularTotal();
 		System.out.println("TOTAL=" + total);
 		
-		lista.excluirPrimeiroNO();
+		lista.excluirUltimoNO();
 		total = lista.calcularTotal();
 		System.out.println("TOTAL=" + total);
 	}

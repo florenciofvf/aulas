@@ -5,7 +5,7 @@ public class NO {
 
 	public NO() {
 	}
-
+	
 	public NO(NO proximo) {
 		this.proximo = proximo;
 	}

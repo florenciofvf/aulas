@@ -5,10 +5,10 @@ package br.com.turma_java.exercicio2;
 public class Main {
 
 	public static void main(String[] args) {
-		Pessoa p = new Pessoa();
+		Pessoa p = new Pessoa(1);
 
-		// p.setIdade(45);
-		// System.out.println("IDADE: " + p.getIdade());
+		p.setIdade(45);
+		System.out.println("IDADE: " + p.getIdade());
 	}
 
 }

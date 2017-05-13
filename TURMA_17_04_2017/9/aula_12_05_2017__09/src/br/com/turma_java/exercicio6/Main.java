@@ -19,21 +19,37 @@ public class Main {
 		System.out.println("MÉDIA=" + media);
 	}
 
-	private static int calcularTotal(NO n) {
-		int soma = n.valor;
+	private static int calcularTotal(NO ref) {
+		int soma = ref.valor; //3
+		
+		ref = ref.proximo;
 
-		n = n.proximo;
-
-		while (n != null) {
-			soma += n.valor;
-			n = n.proximo;
+		while (ref != null) {
+			soma += ref.valor;
+			ref = ref.proximo;
 		}
 
 		return soma;
 	}
 
 	// IMPLEMENTE ESTE MÉTODO
-	private static double calcularMedia(NO a) {
-		return 0;
+	static double calcularMedia(NO ref) {
+		return calcularTotal(ref) / totalNO(ref);
+	}
+	
+	static float totalNO(NO ref) {
+		int total = 0;
+		
+		while(ref != null) {
+			total++;
+			ref = ref.proximo;
+		}
+		
+		return total;
 	}
 }
+
+
+
+
+

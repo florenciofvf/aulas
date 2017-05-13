@@ -4,7 +4,7 @@ package br.com.turma_java.exercicio1;
 public class Main {
 
 	public static void main(String[] args) {
-		Pessoa p = null;
+		Pessoa p = new Pessoa();
 
 		p.setIdade(45);
 

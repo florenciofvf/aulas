@@ -2,17 +2,17 @@ package br.com.turma_java.exercicio3;
 
 //ALTERE O NOME DO ATRIBUTO DESTA CLASSE PARA UM NOME MAIS APROPRIADO
 public class Lampada {
-	private boolean _;
+	private boolean ligado;
 
 	public void acender() {
-		_ = true;
+		ligado = true;
 	}
 
 	public void apagar() {
-		_ = false;
+		ligado = false;
 	}
 
 	public void mostrarEstado() {
-		System.out.println(_ ? "ACESA" : "APAGADA");
+		System.out.println(ligado ? "ACESA" : "APAGADA");
 	}
 }
