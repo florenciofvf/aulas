@@ -1,0 +1,19 @@
+O QUE PODE CONTER UMA CLASSE JAVA
+---------------------------------
+
+Atributos de Instância
+Atributos de classe
+
+Métodos de Instância
+Métodos de classe
+
+Construtores
+
+Blocos de Instância
+Blocos de classe
+
+Classes Internas
+   1 - de Instância
+   2 - de classe
+   3 - Local a método
+   4 - Anônima
