@@ -1,0 +1,52 @@
+boolean - ? x
+byte   -  8
+short  - 16
+char   - 16 x
+int    - 32
+long   - 64
+float  - 32
+double - 64
+true
+false
+final
+void
+return
+switch
+case
+default
+if
+else
+for
+do
+while
+break
+continue
+try
+catch
+finally
+throw
+thrwos
+package
+import
+class
+interface
+abstract
+extends
+implements
+this
+super
+null
+new
+instanceof
+public
+private
+package
+static
+native
+stritfp
+volatile
+synchronized
+assert
+enum
+goto
+const
