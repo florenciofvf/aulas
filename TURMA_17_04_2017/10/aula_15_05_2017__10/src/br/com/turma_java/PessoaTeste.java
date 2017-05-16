@@ -6,6 +6,16 @@ public class PessoaTeste {
 		Pessoa p = new Pessoa("Maria");
 		
 		p.imprimirNome();
+		
+		Funcionario f = new Funcionario("Ana", 5000);
+		f.imprimirNome();
+		
+		mostrarNome(p);
+		mostrarNome(f);
 	}
 
+	public static void mostrarNome(Pessoa p) {
+		p.imprimirNome();
+	}
+	
 }
