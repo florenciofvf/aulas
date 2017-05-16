@@ -44,6 +44,7 @@ package
 static
 native
 stritfp
+transient
 volatile
 synchronized
 assert
