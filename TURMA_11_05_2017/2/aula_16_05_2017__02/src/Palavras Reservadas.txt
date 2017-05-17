@@ -1,53 +1,53 @@
-boolean - ? x
-byte   -  8
-short  - 16
-char   - 16 x
-int    - 32
-long   - 64
-float  - 32
-double - 64
-true
-false
-final
-void
-return
-switch
-case
-default
-if
-else
-for
-do
-while
-break
-continue
-try
-catch
-finally
-throw
-thrwos
-package
-import
-class
-interface
-abstract
-extends
-implements
-this
-super
-null
-new
-instanceof
-public
-private
-package
-static
-native
-stritfp
-transient
-volatile
-synchronized
-assert
-enum
-goto
-const
+* boolean - ? x
+* byte   -  8
+* short  - 16
+* char   - 16 x
+* int    - 32
+* long   - 64
+* float  - 32
+* double - 64
+* true
+* false
+* final  class Teste { final int x = 10; final void msg() {} }
+* void
+* return
+* switch
+* case
+* default
+* if
+* else
+* for
+* do
+* while
+* break
+* continue
+* try
+* catch
+* finally
+* throw
+* thrwos
+* package
+* import
+* class
+* interface  ***
+* abstract
+* extends
+* implements
+* this
+* super
+* null
+* new
+* instanceof
+* public
+* private
+* protected
+* static
+* native JNI
+* stritfp float/double
+* transient
+* volatile
+* synchronized
+* assert
+* enum
+* goto
+* const

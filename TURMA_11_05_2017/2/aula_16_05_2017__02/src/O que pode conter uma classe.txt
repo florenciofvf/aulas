@@ -17,3 +17,21 @@ Classes Internas
    2 - de classe
    3 - Local a método
    4 - Anônima
+
+public class Relatorio {
+   public static final int VERSAO = 1;
+
+   public static void imprimirVersao() {
+        
+   }
+
+   public native void gerarRelatorio();
+
+   static {
+       System.load("...");
+       System.out.println("bytes carregados");
+   }
+   
+   static class Interna {
+   }
+}
