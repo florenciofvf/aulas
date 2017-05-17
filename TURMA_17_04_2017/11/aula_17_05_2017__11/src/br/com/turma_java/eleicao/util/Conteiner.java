@@ -19,4 +19,5 @@ public interface Conteiner {
 
 	public int getPosicao(Object objeto);
 	
+	public boolean contem(Object objeto);
 }

@@ -111,4 +111,9 @@ public class ConteinerImpl implements Conteiner {
 
 		return -1;
 	}
+	
+	public boolean contem(Object objeto) {
+		return getPosicao(objeto) != -1;
+	}
+	
 }
