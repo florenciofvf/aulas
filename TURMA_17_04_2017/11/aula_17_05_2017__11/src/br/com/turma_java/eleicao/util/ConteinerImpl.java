@@ -1,5 +1,9 @@
 package br.com.turma_java.eleicao.util;
 
+//Um objeto do tipo ConteinerImpl aceita o contrato do Conteiner e armazenará 
+//os objetos na memória utilizando um array de Object.
+
+//O objeto documenta que não armazenará valores nulos.
 public class ConteinerImpl implements Conteiner {
 	private Object[] objetos;
 	private int indice;
@@ -15,7 +19,7 @@ public class ConteinerImpl implements Conteiner {
 		}
 		
 		if(indice >= objetos.length) {
-			incrementarArray(0.10);
+			incrementarArray(1.99);
 		}
 		
 		objetos[indice] = objeto;
@@ -31,6 +35,10 @@ public class ConteinerImpl implements Conteiner {
 		for(int i=0; i<bkp.length; i++) {
 			objetos[i] = bkp[i];
 		}
+		
+		//bkp = null;
+		//System.gc();
+		//System.arraycopy(bkp, 0, objetos, 0, bkp.length);
 	}
 	
 	@Override
@@ -41,13 +49,11 @@ public class ConteinerImpl implements Conteiner {
 		
 		boolean excluido = false;
 		
-		for(int i=0; i<objetos.length; i++) {
-			Object obj = objetos[i];
-			
-			if(obj == objeto || obj.equals(objeto)) {
-				objetos[i] = null; //Anular a posição
-				break;
-			}
+		int posicaoObjeto = getPosicao(objeto);
+		
+		if(posicaoObjeto >= 0) {
+			objetos[posicaoObjeto] = null; //Anular a casa do objeto
+			excluido = true;
 		}
 		
 		if(excluido) {
@@ -64,7 +70,7 @@ public class ConteinerImpl implements Conteiner {
 		
 		for(int i=0; i<bkp.length; i++) {
 			if(bkp[i] != null) {
-				objetos[i] = bkp[j];
+				objetos[j] = bkp[i];
 				j++;
 			}
 		}
@@ -82,11 +88,13 @@ public class ConteinerImpl implements Conteiner {
 
 	@Override
 	public Object[] getObjetos() {
-		Object[] resposta = new Object[indice];
+		Object[] resposta = new Object[getTamanho()];
 		
-		for(int i=0; i<indice; i++) {
+		for(int i=0; i<getTamanho(); i++) {
 			resposta[i] = objetos[i];
 		}
+		
+		//System.arraycopy(objetos, 0, resposta, 0, getTamanho());
 		
 		return resposta;
 	}
