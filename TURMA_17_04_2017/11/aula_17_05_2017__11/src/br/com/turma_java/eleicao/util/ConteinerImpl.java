@@ -101,7 +101,7 @@ public class ConteinerImpl implements Conteiner {
 	
 	@Override
 	public int getPosicao(Object objeto) {
-		for(int i=0; i<objetos.length; i++) {
+		for(int i=0; i<getTamanho(); i++) {
 			Object obj = objetos[i];
 			
 			if(obj == objeto || obj.equals(objeto)) {
