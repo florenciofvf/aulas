@@ -1,0 +1,26 @@
+Abstract Factory
+Adapter
+Builder
+Bridge
+Command
+Chain of Responsability
+Composite
+Decorator
+Factory Method
+Facade
+Flyweight
+Iterator
+Interpreter
+Memento
+Mediator
+Observer
+Proxy
+Prototype
+State
+Strategy
+Singleton
+Template Method
+Visitor
+-------
+MVC
+Controller
