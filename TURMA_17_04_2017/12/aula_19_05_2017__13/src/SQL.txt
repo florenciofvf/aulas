@@ -10,7 +10,7 @@
             
 JDBC: Uma API padronizada para a manipulação de banco de dados.
 
-Principais classes e Interfaces:
+Principais classes e Interfaces:RRR
    (C)DriverManager
    (I)Connection(I)
    (I)Statement
