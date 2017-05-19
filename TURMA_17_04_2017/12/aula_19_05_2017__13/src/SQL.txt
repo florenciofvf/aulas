@@ -1,0 +1,32 @@
+        SQL
+        /     |     \
+       /      |       \
+      /       |        \
+   DDL       DML       DCL    
+  CREATE    SELECT      COMMIT
+  DROP      INSERT      ROLLBACK
+  ALTER     UPDATE
+            DELETE
+            
+JDBC: Uma API padronizada para a manipulação de banco de dados.
+
+Principais classes e Interfaces:
+   (C)DriverManager
+   (I)Connection(I)
+   (I)Statement
+   (I)PreparedStatement
+   (I)Callable
+   (I)ResultSet
+   (I)ResultSetMetaData
+   
+Connection: Um objeto do tipo Connection representa uma conexão ativa com um banco
+de dados.
+  Principais métodos:
+     createStatement: Retorna um objeto do tipo Statement
+     prepareStatement: Retorna um objeto do tipo PreparedStatment
+     commit: Confirma a transação no banco de dados
+     rollback: Desfaz a transação no banco de dados
+     
+DriverManager: Através da classe DriverManager obtemos um objeto do tipo Connection
+  Principal Método:
+     getConnection(url do banco, usuário, senha); 
