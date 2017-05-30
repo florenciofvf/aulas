@@ -12,7 +12,8 @@ create table eleicao (
 create table candidato(
    ID int not null primary key auto_increment,
    NOME varchar(70) not null,
-   TELEFONE char(15) not null
+   TELEFONE char(15) not null,
+   EMAIL varchar(80)
 );
 
 create table candidato_eleicao(
