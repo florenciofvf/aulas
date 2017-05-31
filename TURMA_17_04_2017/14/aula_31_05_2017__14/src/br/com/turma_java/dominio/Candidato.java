@@ -1,9 +1,12 @@
 package br.com.turma_java.dominio;
 
+import br.com.turma_java.util.Util;
+
 public class Candidato {
 	private Integer id;
 	private String nome;
 	private Integer votos;
+	private Eleicao eleicao;
 	
 	public Candidato() {
 	}
@@ -31,7 +34,7 @@ public class Candidato {
 	}
 
 	public Integer getVotos() {
-		if(votos == null) {
+		if(Util.estaNulo(votos)) {
 			votos = 0;
 		}
 		
@@ -40,5 +43,19 @@ public class Candidato {
 
 	public void setVotos(Integer votos) {
 		this.votos = votos;
+	}
+
+	public void somarVoto() {
+		getVotos();
+		
+		votos++;
+	}
+	
+	public Eleicao getEleicao() {
+		return eleicao;
+	}
+
+	public void setEleicao(Eleicao eleicao) {
+		this.eleicao = eleicao;
 	}
 }

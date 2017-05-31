@@ -5,34 +5,47 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public final class Util {
-	private DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+	private static DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
 	
 	private Util() {
 	}
 
 	public static String formatar(Date date) {
-		return null;
+		if(estaNulo(date)) {
+			return "";
+		}
+		
+		return format.format(date);
 	}
 	
 	public static Date parseDate(String data) {
-		return null;
+		if(estaVazio(data)) return null;
+		
+		try {
+			Date d = format.parse(data);
+			return d;
+		} catch(Exception e) {
+			throw new IllegalArgumentException(Mensagens.getString("data.invalida"));
+		}
 	}
 	
 	public static java.sql.Date getDateSQL(java.util.Date data) {
-		return null;
+		if(estaNulo(data)) return null;
+		
+		return new java.sql.Date(  data.getTime()  );
 	}
 	
-	public static boolean ehNulo(Object objeto) {
-		return false;
+	public static boolean estaNulo(Object objeto) {
+		return objeto == null;
 	}
 	
-	public static boolean ehVazio(Object objeto) {
-		if(ehNulo(objeto)) return true;
+	public static boolean estaVazio(Object objeto) {
+		if(estaNulo(objeto)) return true;
 		
 		if(objeto instanceof String) {
 			return ((String)objeto).trim().length() == 0;
 		}
 		
-		return false;
+		return objeto.toString().length() == 0;
 	}
 }

@@ -6,13 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.turma_java.dominio.Candidato;
+import br.com.turma_java.dominio.Eleicao;
 
 public class CandidatoDAO extends AbstratoDAO {
-	private final String INSERIR = "INSERT INTO Candidato(nome, votos)" +
-                            " VALUES(?, ?)";
+	private final String INSERIR = 
+			"INSERT INTO Candidato(nome, votos, eleicao_id)" +
+                            " VALUES(?, ?, ?)";
 	
 	private final String ATUALIZAR = "UPDATE Candidato SET nome=?, " +
-	                        " votos=?  WHERE id=?";
+	                        " votos=?, eleicao_id=? WHERE id=?";
 	
 	private final String EXCLUIR = "DELETE FROM Candidato WHERE id=?";
 	
@@ -27,6 +29,7 @@ public class CandidatoDAO extends AbstratoDAO {
 			psmt = conn.prepareStatement(INSERIR, PreparedStatement.RETURN_GENERATED_KEYS);
 			psmt.setString(1, c.getNome());
 			psmt.setInt(2, c.getVotos());
+			psmt.setInt(3, c.getEleicao().getId());
 			psmt.executeUpdate();
 			
 			rs = psmt.getGeneratedKeys();
@@ -47,7 +50,8 @@ public class CandidatoDAO extends AbstratoDAO {
 			psmt = conn.prepareStatement(ATUALIZAR);
 			psmt.setString(1, c.getNome());
 			psmt.setInt(2, c.getVotos());
-			psmt.setInt(3, c.getId());
+			psmt.setInt(3, c.getEleicao().getId());
+			psmt.setInt(4, c.getId());
 			psmt.executeUpdate();
 			psmt.close();
 		} catch(Exception e) {
@@ -84,8 +88,19 @@ public class CandidatoDAO extends AbstratoDAO {
 		if(filtro.getVotos() != null) {
 			sb.append("  AND votos = '" + filtro.getVotos() + "'");
 		}
+
+		if(filtro.getEleicao() != null) {
+			sb.append("  AND eleicao_id = " + filtro.getEleicao().getId());
+		}
 		
 		return sb.toString();
+	}
+	
+	public List<Candidato> getCanditados(Eleicao eleicao) {
+		Candidato filtro = new Candidato();
+		filtro.setEleicao(eleicao);
+		
+		return pesquisar(filtro);
 	}
 	
 	public List<Candidato> pesquisar(Candidato filtro) {
