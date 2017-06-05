@@ -1,9 +1,12 @@
 package br.com.turma_java.servico;
 
+import java.sql.Connection;
 import java.util.List;
 
 import br.com.turma_java.dominio.Candidato;
 import br.com.turma_java.dominio.Eleicao;
+import br.com.turma_java.persistencia.CandidatoDAO;
+import br.com.turma_java.util.Util;
 
 public class CandidatoServico extends AbstratoServico {
 
@@ -16,7 +19,16 @@ public class CandidatoServico extends AbstratoServico {
 	}
 	
 	public void salvar(Candidato candidato) {
+		Connection conn = getConnection();
+		CandidatoDAO dao = new CandidatoDAO(conn);
 		
+		if(Util.estaNulo(candidato.getId())) {
+			dao.inserir(candidato);
+		} else {
+			dao.atualizar(candidato);
+		}
+		
+		fecharConnection(conn);
 	}
 	
 	public void excluir(Candidato candidato) {
