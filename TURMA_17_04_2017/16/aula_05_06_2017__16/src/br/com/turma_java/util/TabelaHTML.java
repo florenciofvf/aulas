@@ -6,6 +6,7 @@ public class TabelaHTML {
 	private String alinhamento;
 	private int borda;
 	private int largura;
+	private String corFundo;
 
 	public int getQtdLinhas() {
 		return qtdLinhas;
@@ -51,6 +52,9 @@ public class TabelaHTML {
 		StringBuilder sb = new StringBuilder("<table");
 		sb.append("  align=" + citar(getAlinhamento()));
 		sb.append("  border=" + citar(getBorda()));
+		
+		sb.append("  bgColor=" + citar(getCorFundo()));
+		
 		sb.append("  width=" + citar(getLargura() + "%"));
 		sb.append(">");
 		
@@ -76,6 +80,14 @@ public class TabelaHTML {
 	
 	private String citar(Object objeto) {
 		return "'" + objeto.toString() + "'";
+	}
+
+	public String getCorFundo() {
+		return corFundo;
+	}
+
+	public void setCorFundo(String corFundo) {
+		this.corFundo = corFundo;
 	}
 }
 
