@@ -79,6 +79,10 @@ public class TabelaHTML {
 	}
 	
 	private String citar(Object objeto) {
+		if(objeto == null) {
+			return "''";
+		}
+		
 		return "'" + objeto.toString() + "'";
 	}
 
