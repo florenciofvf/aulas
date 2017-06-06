@@ -48,6 +48,10 @@ public class TabelaHTML {
 		this.largura = largura;
 	}
 
+	public String getHtml() {
+		return gerarHtml();
+	}
+	
 	public String gerarHtml() {
 		StringBuilder sb = new StringBuilder("<table");
 		sb.append("  align=" + citar(getAlinhamento()));
