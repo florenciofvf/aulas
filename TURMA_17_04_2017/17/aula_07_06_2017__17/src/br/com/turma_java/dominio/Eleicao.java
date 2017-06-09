@@ -59,4 +59,12 @@ public class Eleicao {
 	public void setCandidatos(List<Candidato> candidatos) {
 		this.candidatos = candidatos;
 	}
+	
+	public boolean isIniciada() {
+		return dataIniciada != null;
+	}
+	
+	public boolean isFinalizada() {
+		return dataFinalizada != null;
+	}
 }

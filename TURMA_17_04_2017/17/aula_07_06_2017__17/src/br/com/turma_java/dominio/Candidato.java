@@ -45,10 +45,19 @@ public class Candidato {
 		this.votos = votos;
 	}
 
-	public void somarVoto() {
+	public boolean somarVoto() {
+		if(eleicao == null) {
+			return false;
+		}
+		
 		getVotos();
 
-		votos++;
+		if(eleicao.isIniciada() && !eleicao.isFinalizada()) {
+			votos++;
+			return true;
+		}
+		
+		return false;
 	}
 
 	public Eleicao getEleicao() {
