@@ -59,6 +59,18 @@ public class Candidato {
 		
 		return false;
 	}
+	
+	//   345 ----- 100%
+	//    98 -----  ?
+	public int getPorcentagemVotos() {
+		if(eleicao == null) return 0;
+		
+		int totalVotos = eleicao.getTotalVotos();
+		
+		if(totalVotos == 0) return 0;
+		
+		return getVotos() * 100 / totalVotos;
+	}
 
 	public Eleicao getEleicao() {
 		return eleicao;

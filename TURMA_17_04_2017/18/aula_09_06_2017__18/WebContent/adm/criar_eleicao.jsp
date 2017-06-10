@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="br.com.turma_java.servico.CandidatoServico"%>
 <%@page import="br.com.turma_java.dominio.Eleicao"%>
 <%@page import="br.com.turma_java.dominio.Candidato"%>
 <%@page import="br.com.turma_java.servico.EleicaoServico"%>
@@ -10,9 +12,35 @@
 	
 		<%
 			EleicaoServico servico = new EleicaoServico();
-			Eleicao eleicao = null;
+			Eleicao eleicao = new Eleicao();
+			eleicao.setDescricao("Qual a linguagem de programação mais fácil?");
+			eleicao.setDataIniciada(new Date());
+			servico.salvar(eleicao);
+			
+			CandidatoServico servicoCandidato = new CandidatoServico();
 			Candidato candidato = null;
+			
+			candidato = new Candidato();
+			candidato.setNome("C");
+			candidato.setEleicao(eleicao);
+			servicoCandidato.salvar(candidato);
+			
+			candidato = new Candidato();
+			candidato.setNome("C++");
+			candidato.setEleicao(eleicao);
+			servicoCandidato.salvar(candidato);
+
+			candidato = new Candidato();
+			candidato.setNome("PHP");
+			candidato.setEleicao(eleicao);
+			servicoCandidato.salvar(candidato);
+
+			candidato = new Candidato();
+			candidato.setNome("JAVA");
+			candidato.setEleicao(eleicao);
+			servicoCandidato.salvar(candidato);
 		%>
 	
+		Salvo com sucesso!
 	</body>
 </html>

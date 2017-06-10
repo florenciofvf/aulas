@@ -81,11 +81,7 @@ public class CandidatoDAO extends AbstratoDAO {
 		if (filtro.getNome() != null) {
 			sb.append("  AND nome LIKE '%" + filtro.getNome() + "%'");
 		}
-
-		if (filtro.getVotos() != null) {
-			sb.append("  AND votos = '" + filtro.getVotos() + "'");
-		}
-
+		
 		if (filtro.getEleicao() != null) {
 			sb.append("  AND eleicao_id = " + filtro.getEleicao().getId());
 		}

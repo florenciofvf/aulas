@@ -56,8 +56,32 @@ public class Eleicao {
 		return candidatos;
 	}
 
+	public Candidato getCandidato(Integer numero) {
+		for(Candidato c : candidatos) {
+			if(c.getId().equals(numero)) {
+				return c;
+			}
+		}
+		
+		return null;
+	}
+	
+	public int getTotalVotos() {
+		int total = 0;
+		
+		for(Candidato c : candidatos) {
+			total += c.getVotos();
+		}
+		
+		return total;
+	}
+	
 	public void setCandidatos(List<Candidato> candidatos) {
 		this.candidatos = candidatos;
+		
+		for(Candidato c : candidatos) {
+			c.setEleicao(this);
+		}
 	}
 	
 	public boolean isIniciada() {

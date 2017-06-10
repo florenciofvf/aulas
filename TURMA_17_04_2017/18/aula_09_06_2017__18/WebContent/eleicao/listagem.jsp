@@ -26,7 +26,7 @@
 			      <tr>
 			           <td> ${obj.id}        						   </td>
 			           <td> ${obj.descricao} 						   </td>
-			           <td> <a href="votar.jsp?id=${obj.id}">Votar</a> </td>
+			           <td> <a href="selecionarCandidato.jsp?id=${obj.id}">Votar</a> </td>
 				  </tr>
 			<% } %>
 		</table>
