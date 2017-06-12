@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    
+    <package name="principal" namespace="/" extends="struts-default">
+    </package>
+    
+
+    <package name="menu_principal" namespace="/menu_principal" extends="principal">
+        <action name="Menu">
+            <result>/menu_principal.jsp</result>
+        </action>
+    </package>
+
+    <package name="exemplo01" namespace="/exemplo01" extends="principal">
+        <action name="OlaMundo" class="exemplo01.OlaMundoAction">
+            <result name="sucesso">/exemplo01/ola_mundo.jsp</result>
+        </action>
+    </package>
+
+    <package name="exemplo02" namespace="/exemplo02" extends="principal">
+        <action name="Somar">
+            <result>/exemplo02/enviar.jsp</result>
+        </action>
+
+        <action name="Calcular" class="exemplo02.CalcularAction">
+            <result name="sucesso">/exemplo02/calcula.jsp</result>
+        </action>
+    </package>
+    
+    <package name="exemplo03" namespace="/exemplo03" extends="principal">
+        
+        <interceptors>
+            <interceptor name="log" class="exemplo03.Logger" />
+            <interceptor name="teste" class="exemplo03.Teste" />
+        </interceptors>
+        
+        <action name="DataHora" class="exemplo03.DataHoraAction">
+            <interceptor-ref name="log" />
+            <interceptor-ref name="teste" />
+            <result name="sucesso">/exemplo03/data_hora.jsp</result>
+        </action>
+    </package>
+    
+    
+  <package name="cliente" namespace="/cliente" extends="principal">
+        
+    <action name="ManterCliente"
+         	class="br.com.turma_java.action.ManterClienteAction" 
+         	method="{0}">
+            <result name="sucesso">/cadastro/cliente.jsp</result>
+    </action>
+        
+  </package>
+    
+    
+</struts>
