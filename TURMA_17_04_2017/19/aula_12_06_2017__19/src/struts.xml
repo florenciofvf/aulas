@@ -6,9 +6,11 @@
 <struts>
     
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    
     <constant name="struts.devMode" value="false" />
     
     <package name="principal" namespace="/" extends="struts-default">
+    
     </package>
     
 
@@ -36,10 +38,10 @@
     
     <package name="exemplo03" namespace="/exemplo03" extends="principal">
         
-        <interceptors>
+    	<interceptors>
             <interceptor name="log" class="exemplo03.Logger" />
             <interceptor name="teste" class="exemplo03.Teste" />
-        </interceptors>
+        </interceptors>    
         
         <action name="DataHora" class="exemplo03.DataHoraAction">
             <interceptor-ref name="log" />
@@ -53,7 +55,7 @@
         
     <action name="ManterCliente"
          	class="br.com.turma_java.action.ManterClienteAction" 
-         	method="{0}">
+         	method="processar">
             <result name="sucesso">/cadastro/cliente.jsp</result>
     </action>
         

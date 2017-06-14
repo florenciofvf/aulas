@@ -6,15 +6,14 @@
 	<head>
 	</head>
 	<body>
-			
-		<s:form method="post" namespace="/exemplo02" action="Calcular">
 		
-			<s:textfield name="valor1" label="Valor1" />
-			<s:textfield name="valor2" label="Valor2" />
-			<s:textfield name="valor3" label="Valor3" />
-
-			<s:submit value="Somar" />
-		</s:form>
-
+	 <ul>
+		<s:iterator var="c" value="clientes">
+			<li>
+				<s:property value="nome"/> - <s:property value="email"/>
+			</li>
+		</s:iterator>
+	 </ul>		
+			
 	</body>
 </html>

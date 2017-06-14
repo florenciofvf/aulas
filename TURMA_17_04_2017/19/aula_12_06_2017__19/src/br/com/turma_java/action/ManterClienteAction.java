@@ -1,54 +1,30 @@
 package br.com.turma_java.action;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import br.com.turma_java.dominio.Cliente;
 
 public class ManterClienteAction {
-	private Cliente cliente;
-	
-	public Cliente getCliente() {
-		if(cliente == null) {
-			cliente = new Cliente();
-		}
+	private List<Cliente> clientes;
+	              
+	public String processar() {
+		clientes = new ArrayList<>();
 		
-		return cliente;
-	}
-	
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-	
-	public String salvar() {
-		try {
-			//ClienteServico.salvarCliente(getCliente());
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+		clientes.add(new Cliente("Maria da Silva",     "maria@maria.com.br"    ));
+		clientes.add(new Cliente("Carlos José",        "carlos@carlos.com.br"  ));
+//		clientes.add(new Cliente("Francisco da Silva", "francisco@teste.com.br"));
+//		clientes.add(new Cliente("Antonio Vieira",     "antonio@teste.com.br"  ));
+//		clientes.add(new Cliente("Marta Oliveira",     "marta@marta.com.br"    ));
 		
 		return "sucesso";
 	}
-	
-	public String execute() {
-		return "sucesso";
-	}
-	
-	public List<String> getSexos() {
-		return new ArrayList<String>( Arrays.asList("M", "F") );
-	}
-	
+
 	public List<Cliente> getClientes() {
-		List<Cliente> listagem = new ArrayList<>();
-		return listagem;
-		
-//		try {
-//			//return ClienteServico.pesquisarCliente(null);
-//		} catch(Exception e) {
-//			e.printStackTrace();
-//			return new ArrayList<Cliente>();
-//		}		
+		return clientes;
 	}
-	
+
+	public void setClientes(List<Cliente> clientes) {
+		this.clientes = clientes;
+	}
 }

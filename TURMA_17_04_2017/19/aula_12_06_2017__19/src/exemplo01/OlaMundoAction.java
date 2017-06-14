@@ -11,7 +11,7 @@ public class OlaMundoAction {
 	
 	
 	public String getMensagem() {
-		return "Mensagem da Action Olá Mundo!";
+		return "Olá Mundo!";
 	}
 	
 	
