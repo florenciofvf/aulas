@@ -26,7 +26,8 @@ public class Main02 {
 		Constructor[] construtores = classe.getConstructors();
 		System.out.println("CONSTRUTORES");
 		for(Constructor c : construtores) {
-			System.out.println(c.getName());
+			System.out.println(c.getName() + " >> " + 
+					c.getParameterCount());
 		}
 	}
 
