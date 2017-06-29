@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Seleção Estado</string>
+
+    <string-array name="estado">
+        <item>Pará</item>
+        <item>Tocantins</item>
+        <item>Rio de Janeiro</item>
+        <item>São Paulo</item>
+        <item>Goiás</item>
+        <item>Sergipe</item>
+    </string-array>
+</resources>
