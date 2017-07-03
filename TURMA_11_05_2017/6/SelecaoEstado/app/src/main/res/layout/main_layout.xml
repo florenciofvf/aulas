@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="atividade.turma_android.com.br.selecaoestado.MainActivity">
 
-
-    <Button
-        android:onClick="invocarAtividadeEstados"
-        android:text="Selecionar Estado"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:onClick="invocarAtividadeAlunos"
-        android:text="Visualizar Alunos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/button1"
+            android:onClick="invocarAtividadeEstados"
+            android:text="Selecionar Estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
+        <Button
+            android:onClick="invocarAtividadeAlunos"
+            android:text="Visualizar Alunos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <Button
+            android:onClick="invocarAtividadeMensagem"
+            android:text="Intenção Implícita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View android:background="#000000" android:layout_width="match_parent" android:layout_height="2dp" />
+
+        <Button
+            android:onClick="navegarInternet"
+            android:text="Visitar o google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="apenasDiscar"
+            android:text="Discar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="localizacao"
+            android:text="Abrir Mapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="enviarSMS"
+            android:text="Enviar SMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="buscarNaInternet"
+            android:text="Buscar na Internet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="abrirConfiguracoes"
+            android:text="Configurações"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>

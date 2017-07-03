@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Seleção Estado</string>
 
+    <string name="erro_enviar_intent">A Intent não pode ser enviada.</string>
+
     <string-array name="estado">
         <item>Pará</item>
         <item>Tocantins</item>
